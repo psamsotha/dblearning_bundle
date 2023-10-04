@@ -1,4 +1,5 @@
 
+.env
 .databricks/
 build/
 dist/
