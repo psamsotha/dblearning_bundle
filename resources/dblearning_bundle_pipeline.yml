@@ -1,0 +1,12 @@
+# The main pipeline for dblearning_bundle
+resources:
+  pipelines:
+    dblearning_bundle_pipeline:
+      name: dblearning_bundle_pipeline
+      target: dblearning_bundle_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: /Workspace/${workspace.file_path}/src
